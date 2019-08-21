@@ -1,158 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body style="background-color:black;">
-	
-	
-    <link rel="icon" 
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Dili Suco Boundaries</title>
+
+      <link rel="icon" 
       type="image/png" 
       href="https://caravela.files.wordpress.com/2016/07/ico.png">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="timorleste at live dot com | T | 2000 | AudioVisual GIS and Archive Development in Timor Leste">
     <meta name="description" content="Our mission is to help facilitate the newly independent East-Timor in accessing the voices and the key events in its past and fostering an understanding of its unique cultural heritage; to help unite and secure the identity of the country and its people; and to contribute to the forging of a new democratic nation. To ensure the survival of unique resources which contain and communicate the experience and the story of Timor-Leste and to place these at the service of peace and understanding, in Timor-Leste, Regionally and Internationally.">
     <meta name="keywords" content="Information, Technology, Media, System, Management, Audio, Visual, Archive, CAMSTL, East-Timor, Timor-Leste, Timor-Lorosa'e">
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>underwater</title>
-    			
-	
-<style>
 
-						
-	
-	
-	
-	
-div#video_player_box{ width:550px; background:#000; margin:0px auto;}
-div#video_controls_bar{ background: #333; padding:10px; color:#CCC; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
-button#playpausebtn{
-	background:url(pause.png);
-	border:none;
-	width:16px;
-	height:18px;
-	cursor:pointer;
-	opacity:0.5;
-}
-button#playpausebtn:hover{ opacity:1; }
-input#seekslider{ width:180px; }
-input#volumeslider{ width: 80px;}
-input[type='range'] {
-    -webkit-appearance: none !important;
-    background: #000;
-	border:#666 1px solid;
-    height:4px;
-}
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    background: #FFF;
-    height:15px;
-    width:15px;
-	border-radius:100%;
-	cursor:pointer;
-}
-</style>
-<script>
-var vid, playbtn, seekslider, curtimetext, durtimetext, mutebtn, volumeslider, fullscreenbtn;
-function intializePlayer(){
-	// Set object references
-	vid = document.getElementById("my_video");
-	playbtn = document.getElementById("playpausebtn");
-	seekslider = document.getElementById("seekslider");
-	curtimetext = document.getElementById("curtimetext");
-	durtimetext = document.getElementById("durtimetext");
-	mutebtn = document.getElementById("mutebtn");
-	volumeslider = document.getElementById("volumeslider");
-	fullscreenbtn = document.getElementById("fullscreenbtn");
-	// Add event listeners
-	playbtn.addEventListener("click",playPause,false);
-	seekslider.addEventListener("change",vidSeek,false);
-	vid.addEventListener("timeupdate",seektimeupdate,false);
-	mutebtn.addEventListener("click",vidmute,false);
-	volumeslider.addEventListener("change",setvolume,false);
-	fullscreenbtn.addEventListener("click",toggleFullScreen,false);
-}
-window.onload = intializePlayer;
-function playPause(){
-	if(vid.paused){
-		vid.play();
-		playbtn.style.background = "url(pause.png)";
-	} else {
-		vid.pause();
-		playbtn.style.background = "url(play.png)";
-	}
-}
-function vidSeek(){
-	var seekto = vid.duration * (seekslider.value / 100);
-	vid.currentTime = seekto;
-}
-function seektimeupdate(){
-	var nt = vid.currentTime * (100 / vid.duration);
-	seekslider.value = nt;
-	var curmins = Math.floor(vid.currentTime / 60);
-	var cursecs = Math.floor(vid.currentTime - curmins * 60);
-	var durmins = Math.floor(vid.duration / 60);
-	var dursecs = Math.floor(vid.duration - durmins * 60);
-	if(cursecs < 10){ cursecs = "0"+cursecs; }
-	if(dursecs < 10){ dursecs = "0"+dursecs; }
-	if(curmins < 10){ curmins = "0"+curmins; }
-	if(durmins < 10){ durmins = "0"+durmins; }
-	curtimetext.innerHTML = curmins+":"+cursecs;
-	durtimetext.innerHTML = durmins+":"+dursecs;
-}
-function vidmute(){
-	if(vid.muted){
-		vid.muted = false;
-		mutebtn.innerHTML = "mute";
-	} else {
-		vid.muted = true;
-		mutebtn.innerHTML = "unmute";
-	}
-}
-function setvolume(){
-	vid.volume = volumeslider.value / 100;
-}
-function toggleFullScreen(){
-	if(vid.requestFullScreen){
-		vid.requestFullScreen();
-	} else if(vid.webkitRequestFullScreen){
-		vid.webkitRequestFullScreen();
-	} else if(vid.mozRequestFullScreen){
-		vid.mozRequestFullScreen();
-	}
-}
-</script>
-</head>
-	
 
-	
-	
-	
-	
-<body>
-<div id="video_player_box">
+<iframe src="https://drive.google.com/file/d/16EgfC9ruKVMXCEdeCi9YQLOeDKkgzuLF/view?usp=sharing/preview?" width="100%" height="630"></iframe>
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Faudiovisualarchivetimorleste&width=570&layout=standard&action=like&size=large&show_faces=true&share=true&height=100&appId=1138847206148818" width="570" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>  
 
-  <video id="my_video" width="550" height="310" loop autoplay>
-    <source src=".\media\underwater.mp4">
 
-  </video>
-  <div id="video_controls_bar">
-    <button id="playpausebtn"></button>
-    <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
-    <span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
-    <button id="mutebtn">mute</button>
-    <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
-    <button id="fullscreenbtn">camstl</button>
-  </div>
+
+    
+    
+    
+ 
+ <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution="setup_tool"
+  page_id="217976488372499"
+  theme_color="#6699cc"
+  logged_in_greeting="Ola! How can we help you?"
+  logged_out_greeting="Ola! How can we help you?">
 </div>
-</body>
-</html>
-	
-
-	
-	
-
+         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
@@ -175,7 +78,6 @@ s0.parentNode.insertBefore(s1,s0);
     
     
     
-    	
-	
-	
-	
+    
+
+
